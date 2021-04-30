@@ -77,7 +77,7 @@ info.style.color = 'green'
 
 // CTA section
 const headingOne = document.querySelector('h1')
-headingOne.textContent = siteContent.cta['h1']
+headingOne.innerHTML = 'DOM<br>Is<br>Awesome'
 
 const button = document.querySelector('button')
 button.textContent = siteContent.cta['button']
