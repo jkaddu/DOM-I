@@ -37,6 +37,71 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+// Images
+// calling it using bracket notation
+const logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const headerImg = document.getElementById("cta-img")
+headerImg.setAttribute('src', siteContent["cta"]['img-src'])
+
+const middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+// Navigation bar
+// calling it using dot notation 
+const anchorTags = document.querySelectorAll('nav a')
+anchorTags[0].textContent = siteContent.nav['nav-item-1']
+anchorTags[1].textContent = siteContent.nav['nav-item-2']
+anchorTags[2].textContent = siteContent.nav['nav-item-3']
+anchorTags[3].textContent = siteContent.nav['nav-item-4']
+anchorTags[4].textContent = siteContent.nav['nav-item-5']
+anchorTags[5].textContent = siteContent.nav['nav-item-6']
+
+anchorTags.forEach(item => item.style.color = 'green')
+
+const resource = document.createElement('a')
+resource.textContent = 'Resource'
+resource.href = '#'
+resource.classList.add('nav-item-7')
+document.querySelector('nav').appendChild(resource)
+resource.style.color = 'green'
+
+const info = document.createElement('a')
+info.textContent = 'Info'
+info.href = '#'
+info.classList.add('nav-item-8')
+document.querySelector('nav').prepend(info)
+info.style.color = 'green'
+
+
+// CTA section
+const headingOne = document.querySelector('h1')
+headingOne.textContent = siteContent.cta['h1']
+
+const button = document.querySelector('button')
+button.textContent = siteContent.cta['button']
+
+// Main Content
+const headingFour = document.querySelectorAll('h4')
+headingFour[0].textContent = siteContent["main-content"]['features-h4']
+headingFour[1].textContent = siteContent['main-content']['about-h4']
+headingFour[2].textContent = siteContent['main-content']['product-h4']
+headingFour[3].textContent = siteContent['main-content']['services-h4']
+headingFour[4].textContent = siteContent['main-content']['vision-h4']
+
+const paragraphs = document.querySelectorAll('p')
+paragraphs[0].textContent = siteContent["main-content"]['features-content']
+paragraphs[1].textContent = siteContent['main-content']['about-content']
+paragraphs[2].textContent = siteContent['main-content']['services-content']
+paragraphs[3].textContent = siteContent['main-content']['products-content']
+paragraphs[4].textContent = siteContent['main-content']['vision-content']
+
+// Contact
+headingFour[5].textContent = siteContent.contact['contact-h4']
+paragraphs[5].textContent = siteContent.contact['address']
+paragraphs[6].textContent = siteContent.contact['phone']
+paragraphs[7].textContent = siteContent.contact['email']
+
+// Footer
+paragraphs[8].textContent = siteContent.footer['copyright']
