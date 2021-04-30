@@ -38,7 +38,7 @@ const siteContent = {
 };
 
 // Images
-// calling it using bracket notation
+// selecting elements using bracket notation
 const logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -49,7 +49,7 @@ const middleImg = document.getElementById('middle-img')
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 // Navigation bar
-// calling it using dot notation 
+// selecting elements using dot notation 
 const anchorTags = document.querySelectorAll('nav a')
 anchorTags[0].textContent = siteContent.nav['nav-item-1']
 anchorTags[1].textContent = siteContent.nav['nav-item-2']
